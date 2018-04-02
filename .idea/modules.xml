@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AppManagerUtil.iml" filepath="$PROJECT_DIR$/AppManagerUtil.iml" />
+      <module fileurl="file://$PROJECT_DIR$/appbaseutils/appbaseutils.iml" filepath="$PROJECT_DIR$/appbaseutils/appbaseutils.iml" />
+    </modules>
+  </component>
+</project>

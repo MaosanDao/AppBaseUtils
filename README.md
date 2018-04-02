@@ -8,10 +8,8 @@
 * 将下载的`AppBaseUtils.jar`放入到app目录下的libs中
 * 右键`AppBaseUtils.jar`文件，然后选择`Add as Library`
 ## 使用步骤
-### 初始化
+### ActivityStackUtil初始化
 ```Java
-//使用AppBaseUtilsManager来获取各个工具类，且完成各工具类的初始化工作。
-* ActivityStackUtil初始化（Activity管理类）
   AppBaseUtilsManager.getAppActivityStack().init(Applicalition application);
 ```
 ### ActivityStackUtil的方法介绍

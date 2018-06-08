@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AppBaseUtils</string>
+    <string name="unknown">unknow</string>
 </resources>

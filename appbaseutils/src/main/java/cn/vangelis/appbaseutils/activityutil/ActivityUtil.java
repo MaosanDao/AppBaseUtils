@@ -1,4 +1,4 @@
-package cn.vangelis.appbaseutils;
+package cn.vangelis.appbaseutils.activityutil;
 
 import android.app.Activity;
 import android.app.Application;
@@ -17,7 +17,7 @@ import java.util.Stack;
  * Email:Vangelis.wang@make1.cn
  */
 
-public class AppActivityStackUtil {
+public class ActivityUtil {
 
     private Application mContext;
     public static final String TAG = "AppManager";
@@ -28,13 +28,13 @@ public class AppActivityStackUtil {
     private static Stack<Activity> mActivates = new Stack<>();
 
     private static class LazyHolder {
-        private static final AppActivityStackUtil INSTANCE = new AppActivityStackUtil();
+        private static final ActivityUtil INSTANCE = new ActivityUtil();
     }
 
-    private AppActivityStackUtil() {
+    private ActivityUtil() {
     }
 
-    public static final AppActivityStackUtil getInstance() {
+    public static final ActivityUtil build() {
         return LazyHolder.INSTANCE;
     }
 
@@ -116,7 +116,7 @@ public class AppActivityStackUtil {
     /**
      * 销毁所有的Activity
      */
-    public void removeALLActivity() {
+    public static void removeALLActivity() {
         if (mActivates == null) {
             return;
         }
@@ -129,7 +129,7 @@ public class AppActivityStackUtil {
     /**
      * 获取栈顶的Activity
      */
-    public Activity getTopActivity() {
+    public static Activity getTopActivity() {
         return mActivates.lastElement();
     }
 
@@ -138,7 +138,7 @@ public class AppActivityStackUtil {
      *
      * @param cls Activity
      */
-    public void finishActivity(Class<?> cls) {
+    public static void finishActivity(Class<?> cls) {
         if (cls == null) {
             return;
         }
@@ -155,7 +155,7 @@ public class AppActivityStackUtil {
     /**
      * 获取当前所有的Activity集合
      */
-    public List<Activity> getAllActivity() {
+    public static List<Activity> getAllActivity() {
         if (mActivates.size() == 0) {
             return null;
         }
@@ -168,7 +168,7 @@ public class AppActivityStackUtil {
      * @param cls 类名
      * @return Activity
      */
-    public Activity getActivity(Class<?> cls) {
+    public static Activity getActivity(Class<?> cls) {
         if (cls == null) {
             return null;
         }
@@ -183,7 +183,7 @@ public class AppActivityStackUtil {
     /**
      * 退出app
      */
-    public void exitApp() {
+    public static void exitApp() {
         removeALLActivity();
         System.exit(0);
         android.os.Process.killProcess(android.os.Process.myPid());

@@ -3,6 +3,7 @@ package cn.vangelis.appbaseutils.activityutil;
 import android.app.Activity;
 import android.app.Application;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.util.Log;
 
 import java.util.Iterator;
@@ -155,6 +156,7 @@ public class ActivityUtil {
     /**
      * 获取当前所有的Activity集合
      */
+    @Nullable
     public static List<Activity> getAllActivity() {
         if (mActivates.size() == 0) {
             return null;
@@ -168,6 +170,7 @@ public class ActivityUtil {
      * @param cls 类名
      * @return Activity
      */
+    @Nullable
     public static Activity getActivity(Class<?> cls) {
         if (cls == null) {
             return null;

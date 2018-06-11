@@ -21,20 +21,21 @@ public class AppActivityStackUtil {
 
     private Application mContext;
     public static final String TAG = "AppManager";
-    private static AppActivityStackUtil Instance = null;
 
     /**
      * 维护Activity 的list
      */
     private static Stack<Activity> mActivates = new Stack<>();
 
+    private static class LazyHolder {
+        private static final AppActivityStackUtil INSTANCE = new AppActivityStackUtil();
+    }
 
-    public static synchronized AppActivityStackUtil getInstance() {
-        if (Instance == null) {
-            return new AppActivityStackUtil();
-        }
+    private AppActivityStackUtil() {
+    }
 
-        return Instance;
+    public static final AppActivityStackUtil getInstance() {
+        return LazyHolder.INSTANCE;
     }
 
     /**

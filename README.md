@@ -1,18 +1,23 @@
+![版本:v0.0.1](https://img.shields.io/badge/jcenter-0.0.1-green.svg)
+
 # AppBaseUtils
 本工具类是为了更快的搭建App的初步框架而存在的，目前工具类中的功能还比较少。其中包括：
 * 实现App的Activity的集中管理。
-
+* 本地音乐的一些工具类
 
 ## 引入步骤
-* 下载 [AppBaseUtils.jar](https://github.com/MaosanDao/AppBaseUtils/blob/master/appbaseutils/appbaseutils.jar)
-* 将下载的`AppBaseUtils.jar`放入到app目录下的libs中
-* 右键`AppBaseUtils.jar`文件，然后选择`Add as Library`
-## 使用步骤
-### ActivityStackUtil初始化
+### 请将下方的lastVersion替换为上方的版本号
+```Java
+compile 'cn.vangelis:appbaseutils:$lastVersion'
+```
+
+## 内容
+### Activity的管理工具
+#### 在BaseApplication中进行初始化
 ```Java
   AppBaseUtilsManager.getAppActivityStack().init(Applicalition application);
 ```
-### ActivityStackUtil的方法介绍
+#### 具体方法介绍
 ```Java
 /**
  * 销毁所有的Activity

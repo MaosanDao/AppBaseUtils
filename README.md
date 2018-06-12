@@ -42,8 +42,6 @@ MusicUtils.scanLocalMusic(Context context);
 //解析音乐文件中的信息
 MusicUtils.getMusicInfo(Context context, String fileName, MusicInfoListener listener);
 ```
-### Todo-List
-* 增加Log打印工具
 ### 更新日志
 * 2018.04.02 发布版本 V0.0.1
 * 2018.06.11 发布版本 V0.0.3

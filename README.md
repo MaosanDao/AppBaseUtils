@@ -1,5 +1,5 @@
-![版本:v0.0.3](https://img.shields.io/badge/jCenter-0.0.3-green.svg)
-![MinSDK:21](https://img.shields.io/badge/minSdk-21-orange.svg)
+![版本:v0.0.5](https://img.shields.io/badge/jCenter-0.0.5-green.svg)
+![MinSDK:16](https://img.shields.io/badge/minSdk-16-orange.svg)
 ![Build:Passing](https://img.shields.io/teamcity/codebetter/bt428.svg)
 
 
@@ -11,7 +11,7 @@
 ## 引入步骤
 ### 请将下方的lastVersion替换为上方的版本号
 ```Java
-compile 'cn.vangelis:appbaseutils:$lastVersion'
+implementation 'cn.vangelis:appbaseutils:$lastVersion'
 ```
 ### 初始化
 ```Java
@@ -45,6 +45,7 @@ MusicUtils.getMusicInfo(Context context, String fileName, MusicInfoListener list
 ### 更新日志
 * 2018.04.02 发布版本 V0.0.1
 * 2018.06.11 发布版本 V0.0.3
+* 2018.07.30 发布版本 V0.0.5
 ### 说明
 此框架为自己的所用，请谨慎选择。
 ### 联系方式
